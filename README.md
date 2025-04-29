@@ -89,4 +89,9 @@ This will return a JSON string like:
 mysql -h your-rds-endpoint.amazonaws.com -P 3306 -u your_username -p
 ```
 
+## For the python file `connect-to-rds.py`, you can run it with
+```
+python3 connect-to-rds.py
+```
+This was gotten from Secrets Manager `Sameple Code` in AWS
 
