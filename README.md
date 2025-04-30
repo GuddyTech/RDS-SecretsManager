@@ -103,3 +103,19 @@ e.g
 ```
 telnet guddy-pub-db2.c96ucmqwyq8j.us-east-1.rds.amazonaws.com 3306
 ```
+
+## CONNECTIVITY ISSUES
+1. If Security Group has a `Public CIDR`: `0.0.0.0/*`
+   - and `DB` is set as `Public`
+     - Bastion Host can access it
+     - Local machine can access it
+   - and `DB` is set as `Private`
+     - Bastion Host can access it
+     - Local machine `can't` access it
+2. If Security Group has a `Private CIDR`(Bastion Host's IP): `10.11.0.0/32`
+   - and `DB` is set as `Public`
+     - Bastion Host can access it
+     - Local machine `can't` access it
+   - and `DB` is set as `Private`
+     - Bastion Host can access it
+     - Local machine `can't` access it
