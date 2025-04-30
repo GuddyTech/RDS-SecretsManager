@@ -59,5 +59,5 @@ mysql -h <rds-endpoint> -u myapp_user -p appdb
 ```
 If it fails, try:
 ```
-If it fails, try:
+nc -vz <rds-endpoint> 3306
 ```
