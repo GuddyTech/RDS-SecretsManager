@@ -28,7 +28,7 @@ After creating the `RDS` e.g `MySQL` database in a `Private Subnet`, create a `B
    FLUSH PRIVILEGES;
    ```
 
-#🔐 Notes:
+# 🔐 Notes:
 Replace `your_database_name` with the actual DB name.
 
 Replace `myapp_user` and `YourStrongPassword123!` with your desired username and password.
@@ -60,4 +60,10 @@ Use least privilege if `ALL PRIVILEGES` is too broad (e.g., use `SELECT, INSERT`
 8. Have the application connect to Secrets Manager to retrieve our new application user credentials
    - Make sure your app is referencing the correct secret name/ARN.
 10. Test the Application
-11. adsfad
+    - Test Manually from Bastion
+      ```
+      mysql -h <rds-endpoint> -u myapp_user -p
+      ```
+      This confirms the user was created and has correct access.
+
+12. Use script to connect easily to the `db` with the Secrets Manager Credential. See: 
