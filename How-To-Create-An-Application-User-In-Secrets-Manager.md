@@ -27,6 +27,12 @@ After creating the `RDS` e.g `MySQL` database in a `Private Subnet`, create a `B
    ```
    FLUSH PRIVILEGES;
    ```
+   - Optional
+     ```
+     SHOW GRANTS FOR 'myapp_user'@'%';
+     ```
+     This will confirm that `myapp_user` has access to `your_database_name`.
+     
 
 ## 🔐 Notes:
 Replace `your_database_name` with the actual DB name.
@@ -69,3 +75,10 @@ Use least privilege if `ALL PRIVILEGES` is too broad (e.g., use `SELECT, INSERT`
 9. Use script to connect easily to the `db` with the Secrets Manager Credential.
 
     See: <a href=./connect-to-rds.py> connect-to-rds using python3 </a> or <a href=./connect-to-rds.sh> connect-to-rds using bash </a>
+
+## 🔒 Reasons You Can’t Connect Directly Yet
+1. RDS is in a private subnet
+That means it has no public IP, and cannot be reached from the internet (including your laptop).
+
+2. Security Group restrictions
+Even if it was public, the RDS security group likely allows connections only from internal VPC IPs (e.g., the bastion host or other app servers).
