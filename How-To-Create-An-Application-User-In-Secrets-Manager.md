@@ -28,7 +28,7 @@ After creating the `RDS` e.g `MySQL` database in a `Private Subnet`, create a `B
    FLUSH PRIVILEGES;
    ```
 
-# 🔐 Notes:
+## 🔐 Notes:
 Replace `your_database_name` with the actual DB name.
 
 Replace `myapp_user` and `YourStrongPassword123!` with your desired username and password.
