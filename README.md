@@ -1,5 +1,5 @@
 # RDS-SecretsManager
-Connecting to MySql Database with Secrets Manager
+## Connecting to MySql Database with Secrets Manager
 
 To run the script that retrieves credentials from AWS Secrets Manager and uses them to log in to your MySQL RDS instance, follow these steps:
 ✅ Pre-requisites
