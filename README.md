@@ -95,3 +95,11 @@ python3 connect-to-rds.py
 ```
 This was gotten from Secrets Manager `Sameple Code` in AWS
 
+## Test if The DB connection can be accessible
+```
+telnet <rds-endpoint> 3306
+```
+e.g
+```
+telnet guddy-pub-db2.c96ucmqwyq8j.us-east-1.rds.amazonaws.com 3306
+```
