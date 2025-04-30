@@ -57,13 +57,15 @@ Use least privilege if `ALL PRIVILEGES` is too broad (e.g., use `SELECT, INSERT`
      - Description
      - Configure Rotation
      - Store
-8. Have the application connect to Secrets Manager to retrieve our new application user credentials
+7. Have the application connect to Secrets Manager to retrieve our new application user credentials
    - Make sure your app is referencing the correct secret name/ARN.
-10. Test the Application
+8. Test the Application
     - Test Manually from Bastion
       ```
       mysql -h <rds-endpoint> -u myapp_user -p
       ```
       This confirms the user was created and has correct access.
 
-12. Use script to connect easily to the `db` with the Secrets Manager Credential. See: 
+9. Use script to connect easily to the `db` with the Secrets Manager Credential.
+
+    See: <a href=./connect-to-rds.py> connect-to-rds using python3 </a> or <a href=./connect-to-rds.sh> connect-to-rds using bash </a>
